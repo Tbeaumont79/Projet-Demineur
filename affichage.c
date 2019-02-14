@@ -1,57 +1,10 @@
 #include "demineur.h"
-/*
-   int getposAdj(int x, int y,int i, int j,int k)
-   {
-   int ret;
-
-   ret = 0; //HAUTi
-   if (k)
-   {
-   if (i == 0 && j == 0)
-   {
-   ret = (j - 1) * x + i - 1;
-   }
-   if (i == 0 && j > 0)
-   {   
-   ret = (j - 1) * x + i - 1;
-   }
-   if (i == 0 && j == x)
-   {
-   ret = (j - 1) * x + i - 1;
-   }
-   if (i > 0 && j == 0)//GAUCHE
-   {
-   ret = (j - 1) * x + i - 1;
-   }
-   if (i > 0 && j == x)//DROITE
-   {
-   ret = (j - 1) * x + i - 1;
-   }
-   if (i == y && j == 0)// BAS
-   {
-   ret = (j - 1) * x + i - 1;
-   }
-   if (i == y && j > 0)
-   {
-   ret = (j - 1) * x + i - 1;
-   }
-   if (i == y && j == x)
-   {
-   ret = (j - 1) * x + i - 1;
-   }
-   else
-   ret = -1;
-
-   }
-   return (ret);
-   }
-   */
 
 static int getposAdj(int i, int j, int x, int y, int k)
 {
     int ret;
     ret = 0;
-
+    //checker si tout fonctione bien
     switch(k){
         case 0 :if(j == 0) ret = -1 ;
                     else if(i == 0) ret = -1 ;
