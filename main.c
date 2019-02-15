@@ -17,7 +17,7 @@ int main (void)
     if ((tab = (CASE *)malloc(sizeof(CASE) * sizeX.x * sizeY.y)) == NULL)
     {
         printf("problem\n");
-        return (NULL);
+        return (1);
     }
     fill_tab(tab,sizeX.x,sizeY.y,num_b.mine);
     print_tab(tab,sizeX.x,sizeY.y);

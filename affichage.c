@@ -46,7 +46,6 @@ static int getposAdj(int i, int j, int x, int y, int k)
 }
 void    bombes_adjacentes(CASE *tab,int x,int y,int i,int j)
 {
-    char num;
     int pos;
 
     pos = (i * x) + j;
@@ -66,10 +65,7 @@ void    bombes_adjacentes(CASE *tab,int x,int y,int i,int j)
 
 CASE    *fill_tab(CASE *tab, int x,int y,int num_min)
 {
-    CASE c;
     int i;
-    int j;
-    int rand_value;
     int rand_num;
 
     srand(time(NULL));
