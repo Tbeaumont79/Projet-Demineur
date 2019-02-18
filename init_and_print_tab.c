@@ -10,7 +10,6 @@ CASE    *fill_tab(CASE *tab, int x,int y,int num_min)
     srand(time(NULL));
     for (i = 0; i < (y * x); i++)
     {
-        tab[i].visible = 1;
         tab[i].val = '0';
     }
     for (i = 0; i < num_min;i++)
