@@ -19,6 +19,7 @@ int main (void)
         printf("problem\n");
         return (1);
     }
+    tab->visible = 0;
     fill_tab(tab,sizeX.x,sizeY.y,num_b.mine);
     print_tab(tab,sizeX.x,sizeY.y);
    // faire un s@:wcanf pour récupérer la taille du démineur
