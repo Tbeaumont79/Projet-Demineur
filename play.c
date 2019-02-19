@@ -15,8 +15,25 @@ int     is_win(CASE *tab, int size_x,int size_y)
         return (0);
     return (1);
 }
-
-int    play(CASE *tab, int size_x, int size_y,CASE value)
+int     print_area(int i, int j, int x,int y,int k)
+{
+   if (getposAdj(i,j,x,y,k) != -1)
+       return (0)
+   if (getposAdj(i + 1,j,x,y,k) != -1)
+       return (1)
+   if (getposAdj(i,j + 1,x,y,k) != -1)
+       return (2);
+   if (getposAdj(i + 1,j + 1,x,y,k) != -1)
+       return (3);
+   if (getposAdj(i - 1,j,x,y,k) != -1)
+       return (4);
+   if (getposAdj(i,j - 1,x,y,k) != -1)
+       return (5);
+   if (getposAdj(i - 1,j - 1,x,y,k) != -1)
+       return (6);
+   return (print_area(i,j,x,y,k));
+}
+int     play(CASE *tab, int size_x, int size_y,CASE value)
 {
     // on récupère les coordonées saisi
     int x;
