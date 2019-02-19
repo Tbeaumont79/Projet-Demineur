@@ -23,7 +23,7 @@ CASE    *fill_tab(CASE *tab, int x,int y,int num_min)
     return (tab);
 }
 
-void    print_tab(CASE *tab, int x, int y)
+void    print_tab(CASE *tab, int x, int y, CASE value)
 {
     int i;
     int j;
@@ -43,7 +43,7 @@ void    print_tab(CASE *tab, int x, int y)
 		for (j = 0; j < x; j++)
 		{
 			int pos = i * x + j;
-            if (!tab[j].visible)
+            if (value.visible)
 			    printf("%c ", tab[pos].val);
             else
                 printf("-  ");

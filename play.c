@@ -2,7 +2,7 @@
 
 //on fait avec les coordonnées pour l'instant : 
 
-int     is_win(CASE *tab, int size_x, int size_y)
+int     is_win(CASE *tab, int size_x,int size_y)
 {
     int k;
 
@@ -16,7 +16,7 @@ int     is_win(CASE *tab, int size_x, int size_y)
     return (1);
 }
 
-int    play(CASE *tab, int size_x, int size_y)
+int    play(CASE *tab, int size_x, int size_y,CASE value)
 {
     // on récupère les coordonées saisi
     int x;
@@ -48,7 +48,8 @@ int    play(CASE *tab, int size_x, int size_y)
                     if (tab[pos].val == '*')
                     {
                         printf("GAME OVER\n\n\n");
-                        print_tab(tab,size_x,size_y);
+                        value.visible = 1;
+                        print_tab(tab,size_x,size_y,value);
                         return (1);
                     }
                     else if (tab[pos].val == '0')

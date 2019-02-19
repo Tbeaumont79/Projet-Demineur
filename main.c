@@ -5,6 +5,7 @@ int main (void)
     CASE sizeX;
     CASE sizeY;
     CASE num_b;
+    CASE value;
    
     printf("Veuillez saisir une taille en largeur \n");
     scanf("%d",&sizeX.x);
@@ -18,10 +19,12 @@ int main (void)
     {
         printf("problem\n");
         return (1);
+    
     }
+    value.visible = 0;
     fill_tab(tab,sizeX.x,sizeY.y,num_b.mine);
-    print_tab(tab,sizeX.x,sizeY.y);
-    play(tab,sizeX.x,sizeY.y);
+    print_tab(tab,sizeX.x,sizeY.y,value);
+    play(tab,sizeX.x,sizeY.y,value);
    // faire un s@:wcanf pour récupérer la taille du démineur
    // size X
    // size Y
