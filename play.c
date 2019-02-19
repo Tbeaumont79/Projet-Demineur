@@ -52,12 +52,9 @@ int    play(CASE *tab, int size_x, int size_y,CASE value)
                         print_tab(tab,size_x,size_y,value);
                         return (1);
                     }
-                    else if (tab[pos].val == '0')
-                    {
-                        printf("%c  ",tab[pos].val);
-                    }
-                    else if (tab[pos].val != '0' || tab[pos].val != '*')
-                        printf("%c  ",tab[pos].val);
+                    if (tab[pos].val == '0')
+                        value.visible = 2;
+                    print_tab(tab,size_x,size_y,value);
                 }
             }
             printf("\n");

@@ -27,27 +27,29 @@ void    print_tab(CASE *tab, int x, int y, CASE value)
 {
     int i;
     int j;
-
-
-    j = 0;
-    i = 0;
-    for (i = 0; i < y;i++)
+    static int alreadydone = 0;
+    if (!alreadydone)
     {
-        for (j = 0; j < x;j++)
+        for (i = 0; i < y;i++)
         {
-            check_allCase(tab,x,y,i,j);
-        }            
+            for (j = 0; j < x;j++)
+            {
+                check_allCase(tab,x,y,i,j);
+                alreadydone = 1;
+            }            
+        }
     }
-	for (i = 0; i < y; i++)
-	{
-		for (j = 0; j < x; j++)
-		{
-			int pos = i * x + j;
-            if (value.visible)
-			    printf("%c ", tab[pos].val);
-            else
-                printf("-  ");
-		}
-		printf("\n");
-	}
+    for (i = 0; i < y; i++)
+    {
+        for (j = 0; j < x; j++)
+        {
+            int pos = i * x + j;
+            if (value.visible == 1)
+                printf("%c ", tab[pos].val);
+            if (value.visible == 2)
+                printf("%c ",tab[pos].val);
+            //appelle d'une fonction récursive
+        }
+        printf("\n");
+    }
 }
