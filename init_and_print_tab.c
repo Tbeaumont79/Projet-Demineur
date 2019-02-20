@@ -46,7 +46,7 @@ void    print_tab(CASE *tab, int x, int y, CASE value)
             int pos = i * x + j;
             if (value.visible == 1)
                 printf("%c ", tab[pos].val);
-            if (value.visible == 2)
+            if (print_area(i,j,x,y) >= 0)
                 printf("%c ",tab[pos].val);
             //appelle d'une fonction récursive
         }
