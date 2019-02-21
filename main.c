@@ -37,13 +37,16 @@ int main (void)
         if (play(tab,sizeX.x,sizeY.y,x,y) == -2)
         {
             printf("GAMEOVER");
+            print_tab(tab,sizeX.x,sizeY.y);
             return (0);
         }
+        if (play(tab,sizeX.x,sizeY.y,x,y) == -3)
+            printf("HEYYY!");
         print_tab(tab,sizeX.x,sizeY.y);
     }
-   // faire un s@:wcanf pour récupérer la taille du démineur
-   // size X
-   // size Y
-   // scanf pour récupérer les coordonées entrée par l'utilisateur
-   return (0);
+    // faire un s@:wcanf pour récupérer la taille du démineur
+    // size X
+    // size Y
+    // scanf pour récupérer les coordonées entrée par l'utilisateur
+    return (0);
 }
