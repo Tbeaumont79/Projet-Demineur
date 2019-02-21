@@ -23,7 +23,7 @@ CASE    *fill_tab(CASE *tab, int x,int y,int num_min)
     return (tab);
 }
 
-void    print_tab(CASE *tab, int x, int y, CASE value)
+void    print_tab(CASE *tab, int x, int y)
 {
     int i;
     int j;
@@ -44,12 +44,13 @@ void    print_tab(CASE *tab, int x, int y, CASE value)
         for (j = 0; j < x; j++)
         {
             int pos = i * x + j;
-            if (value.visible == 1)
-                printf("%c ", tab[pos].val);
-            if (print_area(i,j,x,y) >= 0)
-                printf("%c ",tab[pos].val);
+            if (tab[pos].visible)// faire un cups pour un meilleurs affichage
+                printf(" %c ", tab[pos].val);
+            else
+                printf(" # ");
             //appelle d'une fonction récursive
         }
+        printf("\n");
         printf("\n");
     }
 }
