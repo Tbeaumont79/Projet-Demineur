@@ -20,5 +20,6 @@ void    check_allCase(CASE *tab,int x,int y,int i,int j);
 int     getposAdj(int i, int j, int x, int y, int k);
 int     play(CASE *tab, int size_x, int size_y, int i, int j);
 int     print_area(int i,int j, int x,int y);
+int     is_win(CASE *tab,int size_x, int size_y, int num_min);
 
 #endif

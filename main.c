@@ -2,11 +2,11 @@
 
 int main (void)
 {
+    int x;
+    int y;
     CASE sizeX;
     CASE sizeY;
     CASE num_b;
-    int x;
-    int y;
     CASE *tab;
 
     x = 0;
@@ -18,7 +18,6 @@ int main (void)
     scanf("%d",&sizeY.y);
     printf("veuillez saisir le nombre de mine \n ");
     scanf("%d",&num_b.mine);
-    printf("x = %d et y = %d\n",sizeX.x,sizeY.y);
     if ((tab = (CASE *)malloc(sizeof(CASE) * sizeX.x * sizeY.y)) == NULL)
     {
         printf("problem d'allocation mémoire ! 😀\n");
@@ -27,7 +26,7 @@ int main (void)
     fill_tab(tab,sizeX.x,sizeY.y,num_b.mine);
     print_tab(tab,sizeX.x,sizeY.y);
     while (1)
-    {
+    {// mettre en place le systeme de curseur afin de pouvoir jouer avec les fleches ! 
         printf("entrez les coordonées de x : \n");
         scanf("%d",&x);
         printf("entrez les coordonées de y : \n");
@@ -36,7 +35,13 @@ int main (void)
             printf("bad value");
         if (play(tab,sizeX.x,sizeY.y,x,y) == -2)
         {
-            printf("GAMEOVER");
+            printf("GAMEOVER\n\n");
+            print_tab(tab,sizeX.x,sizeY.y);
+            return (0);
+        }
+        if (is_win(tab,sizeX.x,sizeY.y,num_b.mine))
+        {
+            printf("FELICITATION Tu as gagné .\n");
             print_tab(tab,sizeX.x,sizeY.y);
             return (0);
         }

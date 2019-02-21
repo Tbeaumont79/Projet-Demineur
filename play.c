@@ -1,5 +1,25 @@
 #include "demineur.h"
 
+int     is_win(CASE *tab,int size_x, int size_y, int num_min)
+{
+    int k;
+    int i;
+    int j;
+
+    k = 0;
+    for (i = 0; i < size_y; i++)
+    {
+        for (j = 0; j < size_x; j++)
+        {
+            if (tab[j].visible)
+                k++;
+        }
+    }
+    if (k + num_min == (i * j))
+        return (1);
+    return (0);
+}
+
 int     play(CASE *tab, int size_x, int size_y,int j, int i)
 {
     int ret;
@@ -13,8 +33,7 @@ int     play(CASE *tab, int size_x, int size_y,int j, int i)
         return (2);
     switch (tab[pos].val)
     {
-        case '*': tab[pos].visible = 1;
-                  return (-2);
+        case '*': return (-2);
         case '0':
                   tab[pos].visible = 1;
                   play(tab,size_x,size_y,j - 1,i - 1);
@@ -23,7 +42,9 @@ int     play(CASE *tab, int size_x, int size_y,int j, int i)
                   play(tab,size_x,size_y,j,i + 1);
                   play(tab,size_x,size_y,j - 1,i + 1);
                   play(tab,size_x,size_y,j - 1,i);
+                  break;
         default: tab[pos].visible = 1;
+                 return (1);
     }
     return (0);
 }
