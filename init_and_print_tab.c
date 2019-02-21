@@ -1,7 +1,5 @@
 #include "demineur.h"
 
-
-
 CASE    *fill_tab(CASE *tab, int x,int y,int num_min)
 {
     int i;
@@ -49,9 +47,8 @@ void    print_tab(CASE *tab, int x, int y)
                 printf(" %c ", tab[pos].val);
             else
                 printf(" # ");
-            //appelle d'une fonction récursive
         }
         printf("\n");
         printf("\n");
-    }
+}
 }
