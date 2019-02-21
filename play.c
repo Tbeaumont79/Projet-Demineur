@@ -15,7 +15,8 @@ int     is_win(CASE *tab,int size_x, int size_y, int num_min)
                 k++;
         }
     }
-    if (k + num_min == (i * j))
+    printf("la valeur de k est de : %d\n",k);
+    if (k - num_min == (i * j) - num_min)
         return (1);
     return (0);
 }

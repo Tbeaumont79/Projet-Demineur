@@ -25,7 +25,7 @@ int main (void)
     }
     fill_tab(tab,sizeX.x,sizeY.y,num_b.mine);
     print_tab(tab,sizeX.x,sizeY.y);
-    while (1)
+    while (is_win(tab,sizeX.x,sizeY.y,num_b.mine) != 1)
     {// mettre en place le systeme de curseur afin de pouvoir jouer avec les fleches ! 
         printf("entrez les coordonées de x : \n");
         scanf("%d",&x);
