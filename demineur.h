@@ -1,6 +1,5 @@
 #ifndef DEMINEUR_H
 #define DEMINEUR_H
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
