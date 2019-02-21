@@ -47,5 +47,6 @@ int main (void)
         }
         print_tab(tab,sizeX.x,sizeY.y);
     }
+    free(tab);
     return (0);
 }
