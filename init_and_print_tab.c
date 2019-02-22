@@ -1,5 +1,5 @@
 #include "demineur.h"
-
+#include "ansi.h"
 CASE    *fill_tab(CASE *tab, int x,int y,int num_min)
 {
     int i;
@@ -43,8 +43,10 @@ void    print_tab(CASE *tab, int x, int y)
         for (j = 0; j < x; j++)
         {
             int pos = i * x + j;
-            if (tab[pos].visible)// faire un cups pour un meilleurs affichage et utilisé le goto
+            if (tab[pos].visible)
+            {// faire un cups pour un meilleurs affichage et utilisé le goto
                 printf(" %c ", tab[pos].val);
+            }
             else
                 printf(" # ");
         }

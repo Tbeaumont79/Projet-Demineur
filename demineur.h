@@ -4,8 +4,6 @@
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
-
-
 typedef struct {
     char visible;
     char val;
