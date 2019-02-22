@@ -1,5 +1,5 @@
 #include "demineur.h"
-#include "ansi.h"
+
 int main (void)
 {
     int x;

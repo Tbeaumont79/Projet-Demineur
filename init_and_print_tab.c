@@ -1,5 +1,5 @@
 #include "demineur.h"
-#include "ansi.h"
+
 CASE    *fill_tab(CASE *tab, int x,int y,int num_min)
 {
     int i;
