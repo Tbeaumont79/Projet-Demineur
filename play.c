@@ -13,11 +13,10 @@ int     is_win(CASE *tab,int size_x, int size_y, int num_min)
         {
             if (tab[j].visible)
                 k++;
+            if (k == (size_x * size_y) - num_min)
+                return (1);
         }
     }
-    printf("la valeur de k est de : %d\n",k);
-    if (k - num_min == (i * j) - num_min)
-        return (1);
     return (0);
 }
 
