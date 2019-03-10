@@ -1,9 +1,13 @@
 #ifndef DEMINEUR_H
 #define DEMINEUR_H
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
+#include "ansi.h"
+#include "monconio.h"
+
 typedef struct {
     char visible;
     char val;
