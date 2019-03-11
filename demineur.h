@@ -5,8 +5,6 @@
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
-#include "ansi.h"
-#include "monconio.h"
 
 typedef struct {
     char visible;
